@@ -7,3 +7,4 @@ c=PI*c*c
 s=s*s
 print("Area of Circle:","%.2f"%c)
 print("Area of Square:","%.2f"%s)
+##Shaswat Gupta ECE B2
