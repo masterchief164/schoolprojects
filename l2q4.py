@@ -1,8 +1,9 @@
 # start your code here..
 s, i, c = input().split("\\t")
 i = int(i)
-s1 = s[i + 1:]
-s = s[:i]
-s = s + c + s1
-print(s)
-##Shaswat Gupta ECE B2
+if (i <= (len(s) - 1)) and i >= (0 - len(s)):
+    if (i != -1) and (i != len(s) - 1):
+        s1 = s[:i] + c + s[i + 1:]
+    else:
+        s1 = s[:i] + c
+print(s1)
