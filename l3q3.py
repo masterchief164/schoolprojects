@@ -24,9 +24,9 @@ if b > c:
     tmp = b
     b = c
     c = tmp
-if a==b:
-    if a==c:
-        if a==d:
+if a == b:
+    if a == c:
+        if a == d:
             print(a)
         else:
             print(d)
