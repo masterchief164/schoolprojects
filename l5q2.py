@@ -1,14 +1,19 @@
-inp = input().split()
-inp.sort()
-freq = 0
-pos = 0
-count = 1
-for i in range(1,len(inp)):
-    if inp[i] == inp[i - 1]:
-        count = count + 1
-    else:
-        if freq < count:
-            freq = count
-            pos = i-1
-        count = 1
-print(inp[pos])
+stri = input().split()
+
+
+def freq(inp1):
+    str2 = []
+    inp1.sort()
+    for k in inp1:
+
+        if k not in str2:
+            str2.append(k)
+    max1 = 0
+    for k in range(0, len(str2)):
+        if max1 < inp1.count(str2[k]):
+            max1 = inp1.count(str2[k])
+            pos = k
+    print(str2[pos])
+
+
+freq(stri)

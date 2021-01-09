@@ -1,19 +1,24 @@
+s = int(input())
+
+
 def fib():
-    s = int(input())
     out = ""
     a = 0
     b = 1
 
     def pri():
-        print(out)
-        return
-
-    for i in range(s):
+        nonlocal a, b
         c = a + b
         a = b
         b = c
+
+    for i in range(s):
+        pri()
         out = out + str(b) + " "
-    pri()
+
+    return out
 
 
-fib()
+#    fib()
+
+print(fib())
