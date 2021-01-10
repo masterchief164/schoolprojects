@@ -1,6 +1,3 @@
-s = int(input())
-
-
 def fib():
     out = ""
     a = 0
@@ -19,6 +16,6 @@ def fib():
     return out
 
 
+s = int(input())
 #    fib()
-
 print(fib())
