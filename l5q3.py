@@ -1,21 +1,18 @@
-def fib():
-    out = ""
-    a = 0
+def fibo():
+    a = 1
     b = 1
 
-    def pri():
+    def fib():
         nonlocal a, b
-        c = a + b
-        a = b
-        b = c
+        n = a + b
+        b = a
+        a = n
+        return b
 
-    for i in range(s):
-        pri()
-        out = out + str(b) + " "
-
-    return out
+    return fib
 
 
-s = int(input())
-#    fib()
-print(fib())
+f = fibo()
+inp = int(input())
+for i in range(inp):
+    print(f(), end=" ")
