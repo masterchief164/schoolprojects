@@ -11,7 +11,7 @@ def asc():
 
 
 def sod(a):
-    while a > 10:
+    while a >= 10:
         n = a
         s = 0
         while n > 0:
