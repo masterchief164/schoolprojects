@@ -1,0 +1,4 @@
+A Formula.
+The meaning of a formula is a mathematical relationship or rule expressed in symbols.
+The mathematical relationships are formed based on some logic.
+Therefore, we can say that logic plays an important role in devising a formula.

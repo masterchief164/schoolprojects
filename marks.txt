@@ -1,0 +1,12 @@
+Roll_No  Quiz1   Mid_sem   Quiz2   End_sem   Lab_work    Project   GPA    Grade
+
+110       13      39        16      61        74          30        None  None
+101       None    37        18      55        60          30        None  None
+106       56      32        08      88        90          43.5      None  None
+104       18      42        17      81        95          48        None  None
+108       04      11        85      59        60          28        None  None
+109       20      45        20      95        95          45        None  None
+105       15      44        15      83.5      80          41.5      None  None
+102       19      48        20      96        94.5        45        None  None
+103       07      49        19      92        86          45.5      None  None
+104       None    None      18      78        None        39        None  None
