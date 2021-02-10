@@ -48,9 +48,8 @@ else:
         list.append(i[:len(i) - 1].split())
     for i in range(2, len(list)):
         l = list[i][:len(list[i]) - 2]
-        if "NONE" not in l:
-            g = calc_gpa(l)
-            grade = calc_grade(g)
-            list[i][7] = str(g)
-            list[i][8] = grade
-    print(list)
+
+        if "None" not in l:
+            list[i][7] = str(calc_gpa(l))
+            list[i][8] = calc_grade(float(list[i][7]))
+print(list)
