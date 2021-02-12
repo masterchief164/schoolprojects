@@ -59,7 +59,7 @@ else:
             file1 = file1[:2]
             file1.extend(tmp)
             try:
-                f=open("details.txt","w")
+                f = open("details.txt", "w")
             except:
                 print("Unable to create the file")
             else:
