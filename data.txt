@@ -1,0 +1,7 @@
+Name      ID     Designation
+
+Kartik    05      Manager
+Aman      06      Manager
+Sharvari  18      HR
+Amit      01      Engineer
+Druv      09      Engineer
