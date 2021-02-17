@@ -85,14 +85,14 @@ while True:
             k = k.split(",")
             k[0] = float(k[0])
             k[1] = float(k[1])
-            print(bo.add(k[0], k[1]))
+            print(ao.pow(k[0], k[1]))
         else:
             k = re.split("\(|\)|,", k)
             k[1] = float(k[1])
             k[2] = float(k[2])
             k[5] = float(k[5])
             k[6] = float(k[6])
-            print(ao.power(k[1] / k[2], k[5] / k[6]))
+            print(ao.pow(k[1] / k[2], k[5] / k[6]))
         print(k)
     elif ch == '6':
         print("Enter the numbers to find factorial of:", end=" ")
