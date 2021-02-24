@@ -81,5 +81,6 @@ print("the farthest list is", end=" ")
 for j in far:
     print(j, end=" ")
 print()
-print("The  distance between the closest list and the farthest list", end=" ")
-print(distance(clo, far))
+print("The  distance between the closest list and the farthest list", distance(clo, far))
+print("The  distance between the closest list and the key list", distance(clo, key_lst))
+print("The  distance between the key list and the farthest list", distance(key_lst, far))
