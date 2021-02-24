@@ -14,6 +14,14 @@ def mean_list(list):
     return temp
 
 
+def distance(list1, list2):
+    d = 0
+    for i in range(len(list1)):
+        d = d + ((list1[i] - list2[i]) ** 2)
+    d = d ** 0.5
+    return d
+
+
 f = open("lists.txt", 'r')
 c = 0
 lst = []
@@ -27,4 +35,3 @@ for i in lst:
 print(tmp)
 print(key_lst)
 print(mean_list(tmp))
-
