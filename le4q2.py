@@ -16,11 +16,16 @@ else:
         except ValueError:
             print("ValueError exception: The input values are neither float not integer values")
         else:
+            le = len(key_lst)
             for i in f:
                 lst.append(i.strip("\\n"))
             tmp = []
+            ski = False
             for i in lst:
-                tmp.append(list(map(float, i.split(','))))
+                if le == len(i.split(",")):
+                    tmp.append(list(map(float, i.split(','))))
+                else:
+                    ski = True
             print("Mean List is", end=" ")
             k = mylists.mean_list(tmp)
             for i in k:
