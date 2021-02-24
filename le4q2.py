@@ -28,6 +28,7 @@ else:
         else:
             print("Mean List is", end=" ")
             if len(key_lst) != len(tmp[0]):
+                print("Invalid Key")
                 sys.exit(0)
             k = mylists.mean_list(tmp)
             for i in k:
