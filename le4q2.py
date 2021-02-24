@@ -20,17 +20,14 @@ else:
         else:
             le = len(key_lst)
             for i in f:
-                try :
+                try:
                     lst.append(i.strip("\\n"))
                 except EOFError:
                     print("EOFError exception: End of file reached")
             tmp = []
             ski = False
             for i in lst:
-                if le == len(i.split(",")):
-                    tmp.append(list(map(float, i.split(','))))
-                else:
-                    ski = True
+                tmp.append(list(map(float, i.split(','))))
             print("Mean List is", end=" ")
             k = mylists.mean_list(tmp)
             for i in k:
