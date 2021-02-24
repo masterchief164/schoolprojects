@@ -1,4 +1,4 @@
-f = open("list.txt", 'r')
+f = open("lists.txt", 'r')
 c = 0
 lst = []
 key_lst = input().split(",")
