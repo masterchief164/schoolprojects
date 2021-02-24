@@ -56,6 +56,26 @@ for i in f:
 tmp = []
 for i in lst:
     tmp.append(list(map(float, i.split(','))))
-print(tmp)
-print(key_lst)
-print(mean_list(tmp))
+print("Mean List is", end=" ")
+k = mean_list(tmp)
+for i in k:
+    print(i, end=" ")
+print()
+print("Distance between key_list and mean_list is", distance(k, key_lst))
+if is_in_set(k, tmp):
+    print("mean_list is present in the provided set of lists")
+else:
+    print("mean_list is not present in the provided set of lists")
+clo = closest_farthest(tmp, key_lst, False)
+far = closest_farthest(tmp, key_lst, True)
+print("the closest list is",end=" ")
+for i in clo:
+    print(i,end=" ")
+print()
+print("the farthest list is",end=" ")
+for j in far:
+    print(j,end=" ")
+print()
+print("The  distance between the closest list and the farthest list",end=" ")
+print(distance(clo,far))
+
