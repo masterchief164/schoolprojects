@@ -40,9 +40,14 @@ def closest_farthest(list1, list2, p):
     return lmin
 
 
-def is_in_set(l1, l2):
-    if l1 in l2:
-        return True
+def is_in_set(l2, l1):
+    for i in l1:
+        f = True
+        for j in range(len(i)):
+            if i[j] != l2[j]:
+                f = False
+        if f:
+            return True
     return False
 
 
@@ -68,14 +73,13 @@ else:
     print("mean_list is not present in the provided set of lists")
 clo = closest_farthest(tmp, key_lst, False)
 far = closest_farthest(tmp, key_lst, True)
-print("the closest list is",end=" ")
+print("the closest list is", end=" ")
 for i in clo:
-    print(i,end=" ")
+    print(i, end=" ")
 print()
-print("the farthest list is",end=" ")
+print("the farthest list is", end=" ")
 for j in far:
-    print(j,end=" ")
+    print(j, end=" ")
 print()
-print("The  distance between the closest list and the farthest list",end=" ")
-print(distance(clo,far))
-
+print("The  distance between the closest list and the farthest list", end=" ")
+print(distance(clo, far))
