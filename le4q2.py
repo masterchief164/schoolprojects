@@ -15,11 +15,7 @@ else:
         tmp = []
         ski = False
         for i in lst:
-            try:
-                tmp.append(list(map(float, i.split(','))))
-            except ValueError:
-                print("ValueError exception: The input values are neither float not integer values")
-                ski = True
+            tmp.append(list(map(float, i.split(','))))
         try:
             key_lst = (list(map(float, input().split(','))))
         except EOFError:
@@ -33,7 +29,6 @@ else:
         except ValueError:
             print("ValueError exception: The input values are neither float not integer values")
             print("Invalid Key")
-
         else:
             print("Mean List is", end=" ")
             if len(key_lst) != len(tmp[0]):
