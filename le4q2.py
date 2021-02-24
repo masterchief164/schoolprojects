@@ -18,7 +18,10 @@ else:
         else:
             le = len(key_lst)
             for i in f:
-                lst.append(i.strip("\\n"))
+                try :
+                    lst.append(i.strip("\\n"))
+                except EOFError:
+                    print("EOFError exception: End of file reached")
             tmp = []
             ski = False
             for i in lst:

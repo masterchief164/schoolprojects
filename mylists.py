@@ -39,13 +39,8 @@ def closest_farthest(list1, list2, p):
         return lmax
     return lmin
 
-
-def is_in_set(l2, l1):
-    for i in l1:
-        f = True
-        for j in range(len(i)):
-            if i[j] != l2[j]:
-                f = False
-        if f:
-            return True
-    return False
+def is_in_set(i, j):
+    if i in j:
+        return True
+    else:
+        return False
