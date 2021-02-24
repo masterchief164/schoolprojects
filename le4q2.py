@@ -12,7 +12,6 @@ else:
         lst = []
         for i in f:
             lst.append(i.strip("\\n"))
-            print("EOFError exception: End of file reached")
         tmp = []
         ski = False
         for i in lst:
