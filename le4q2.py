@@ -11,6 +11,8 @@ else:
         lst = []
         try:
             key_lst = (list(map(float, input().split(','))))
+        except EOFError:
+            print("EOFError exception: End of file reached")
         except KeyboardInterrupt:
             print("KeyboardInterrupt exception: Interrupted by the keyboard")
         except ValueError:
