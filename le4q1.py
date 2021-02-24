@@ -1,17 +1,17 @@
 def mean_list(list):
     temp = []
     n = len(list[0])
-    for i in range(0, len(list)):
+    for i in range(0, n):
         temp.append(0)
 
     for i in list:
-        t = 0
-        for j in i:
-            temp[t] = temp[t] + j
-            t += 1
+        for j in range(0, n):
+            temp[j] = temp[j] + i[j]
 
-    for i in range(0, len(temp)):
-        temp[i] = temp[i] / n
+    for i in range(0, n):
+        temp[i] = temp[i] / len(list)
+
+    return temp
 
 
 f = open("lists.txt", 'r')
@@ -26,4 +26,5 @@ for i in lst:
     tmp.append(list(map(float, i.split(','))))
 print(tmp)
 print(key_lst)
+print(mean_list(tmp))
 
