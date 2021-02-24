@@ -1,5 +1,6 @@
 try:
     import mylists
+    import sys
 except ImportError:
     print("ImportError exception: unable to locate the module")
 else:
@@ -9,6 +10,13 @@ else:
         print("IOError exception: unable to locate the file")
     else:
         lst = []
+        for i in f:
+            lst.append(i.strip("\\n"))
+            print("EOFError exception: End of file reached")
+        tmp = []
+        ski = False
+        for i in lst:
+            tmp.append(list(map(float, i.split(','))))
         try:
             key_lst = (list(map(float, input().split(','))))
         except EOFError:
@@ -18,17 +26,9 @@ else:
         except ValueError:
             print("ValueError exception: The input values are neither float not integer values")
         else:
-            le = len(key_lst)
-            for i in f:
-                try:
-                    lst.append(i.strip("\\n"))
-                except EOFError:
-                    print("EOFError exception: End of file reached")
-            tmp = []
-            ski = False
-            for i in lst:
-                tmp.append(list(map(float, i.split(','))))
             print("Mean List is", end=" ")
+            if len(key_lst) != len(tmp[0]):
+                sys.exit(0)
             k = mylists.mean_list(tmp)
             for i in k:
                 print(i, end=" ")
