@@ -22,6 +22,24 @@ def distance(list1, list2):
     return d
 
 
+def closest_farthest(list1, list2, p):
+    lmax = []
+    lmin = []
+    mx = 0
+    mn = 1000000
+    for i in list1:
+        d = distance(i, list2)
+        if d > mx:
+            lmax = i
+            mx = d
+        if d < mn:
+            lmin = i
+            mn = d
+    if p == True:
+        return lmax
+    return lmin
+
+
 f = open("lists.txt", 'r')
 c = 0
 lst = []
