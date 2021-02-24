@@ -35,7 +35,7 @@ def closest_farthest(list1, list2, p):
         if d < mn:
             lmin = i
             mn = d
-    if p == True:
+    if p:
         return lmax
     return lmin
 
