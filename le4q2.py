@@ -13,7 +13,6 @@ else:
         for i in f:
             lst.append(i.strip("\\n"))
         tmp = []
-        ski = False
         for i in lst:
             tmp.append(list(map(float, i.split(','))))
         try:
