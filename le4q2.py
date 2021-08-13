@@ -30,13 +30,13 @@ else:
             print("Invalid Key")
         else:
             print("Mean List is", end=" ")
+            print()
             if len(key_lst) != len(tmp[0]):
                 print("Invalid Key")
                 sys.exit(0)
             k = mylists.mean_list(tmp)
             for i in k:
                 print(i, end=" ")
-            print()
             print("Distance between key_list and mean_list is", mylists.distance(k, key_lst))
             if mylists.is_in_set(k, tmp):
                 print("mean_list is present in the provided set of lists")
