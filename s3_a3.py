@@ -9,7 +9,7 @@ def fac(n):  # function to calculate the factorial
     # is reached and keep the product in the stack
 
 
-def nCr(n, r): # calculating the nCr and printing it upto Start + 1
+def nCr(n, r):  # calculating the nCr and printing it upto Start + 1
     return (fac(n)) // (fac(r) * fac(n - r))
 
 
@@ -59,17 +59,34 @@ def QuestionThree(array):
 
 # fourth Question
 
+def compare(string):  # function to return the decimal value of the roman numeral
+    if string == 'I':
+        return 1
+    elif string == 'V':
+        return 5
+    elif string == 'X':
+        return 10
+    elif string == 'L':
+        return 50
+    elif string == 'C':
+        return 100
+    elif string == 'D':
+        return 500
+    elif string == 'M':
+        return 1000
+
+
 def QuestionFour(inp):
     ans = 0  # final decimal value
     tmp = 0  # temporary variable to store the last element's value
-    table = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}  # roman to hindu arabic dictionary
+    #  table = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}  # roman to hindu arabic dictionary
     leng = len(inp)
     for i in reversed(range(leng)):  # loop in reverse to go through the roman number from right to left
-        if table[inp[i]] < tmp:  # if last element was less than current element the current will be subtracted
-            ans -= table[inp[i]]
-        else:  # otherwise added
-            ans += table[inp[i]]
-        tmp = table[inp[i]]
+        if compare(inp[i]) < tmp:  # if last element was less than current element the current will be subtracted
+            ans -= compare(inp[i])
+        else:  # otherwise it will be added
+            ans += compare(inp[i])
+        tmp = compare(inp[i])
     return ans
 
 
