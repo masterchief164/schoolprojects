@@ -9,17 +9,21 @@ def fac(n):  # function to calculate the factorial
     # is reached and keep the product in the stack
 
 
-def NCRPat(finish, start=0):  # function with start and finish parameters with start  having a default
+def nCr(n, r): # calculating the nCr and printing it upto Start + 1
+    return (fac(n)) // (fac(r) * fac(n - r))
+
+
+def QuestionOne(finish, start=0):  # function with start and finish parameters with start  having a default
     # value of 0
     if start == finish:  # base case until start reaches finish
         return
     for i in range(finish - start):  # printing spaces until the required position of printing is reached
         print("", end=" ")
-    for i in range(start + 1):  # calculating the nCr and printing it upto Start + 1
+    for i in range(start + 1):
         # providing spaces after each element
-        print((fac(start)) // (fac(i) * fac(start - i)), end=" ")
+        print(nCr(start, i), end=" ")
     print()
-    NCRPat(finish, start + 1)
+    QuestionOne(finish, start + 1)
 
 
 # second Question
@@ -70,7 +74,8 @@ def QuestionFour(inp):
 
 
 print("Question One")
-NCRPat(5)
+QuestionOne(5)
+QuestionOne(int(input("Enter the limit ")))
 
 print('\n \n \n \n')
 print("Question Two")
@@ -92,4 +97,8 @@ print("Sorted Array", QuestionThree(arr))
 print('\n \n \n \n')
 print("Question Four")
 
+print(QuestionFour("III"))
+print(QuestionFour("IV"))
+print(QuestionFour("IX"))
+print(QuestionFour("LVIII"))
 print(QuestionFour("MCMXCIV"))
